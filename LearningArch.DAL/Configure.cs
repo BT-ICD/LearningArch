@@ -12,7 +12,9 @@ namespace LearningArch.DAL
         {
             services.AddDbContext<LearningArchDbContext>(options => options.UseSqlServer(connectionString));
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddSingleton(connectionString);
 
         }
+        
     }
 }

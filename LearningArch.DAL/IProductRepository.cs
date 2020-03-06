@@ -8,6 +8,7 @@ namespace LearningArch.DAL
 {
     public interface IProductRepository
     {
-        Task<List<Product>> GetProducts();
+        Task<List<Product>> GetProductsEF();
+        List<Product> GetProducts();
     }
 }

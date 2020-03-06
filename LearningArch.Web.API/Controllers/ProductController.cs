@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearningArch.Web.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[method]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
@@ -18,8 +18,13 @@ namespace LearningArch.Web.API.Controllers
         {
             _productRepository = productRepository;
         }
-        public Task<List<Product>> Get(){
+        public List<Product> Get(){
             var res =  _productRepository.GetProducts();
+            return res;
+        }
+        public Task<List<Product>> GetEF()
+        {
+            var res = _productRepository.GetProductsEF();
             return res;
         }
     }
