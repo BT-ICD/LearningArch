@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LearningArch.Web.API.Controllers
 {
-    [Route("api/[controller]/[method]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
